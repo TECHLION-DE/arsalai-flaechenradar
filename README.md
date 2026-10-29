@@ -6,6 +6,12 @@ Die App ist eine einzelne HTML-Datei (`index.html`) mit eingebetteten Daten und 
 
 `allego/index.html` ist dieselbe App als Konzept-Variante im Look des Betreibers (Demo der Agentur TECHLION, kein Produkt der Allego GmbH).
 
+## Deutschland-Module
+
+- **Ausfahrten DE:** alle Autobahn- und Schnellstraßen-Anschlussstellen, bewertet nach Verkehr (BASt-Dauerzählstellen 2024, aus den Stundenrohdaten berechnet), Schnellladern ab 150 kW im Umkreis und geeigneten Parkflächen mit Tankstelle, Gastro oder Markt direkt an der Ausfahrt.
+- **Märkte DE:** Supermärkte, Discounter und Center mit Bedarfsindex aus Einwohnern in 2 km (Zensus 2022, 1-km-Raster), Verkehr der nächsten gezählten Straße, Einzelhandelsumfeld, Parkplatzgröße und bestehenden Schnellladern in 1 km.
+- Die Daten liegen unter `data/` (JSON für die App, CSV-Vollexporte `ausfahrten_de.csv` und `maerkte_de.csv`) und werden von der App nachgeladen.
+
 ## Was die App kann
 
 - 4.585 bewertete Parkflächen (Score 0 bis 100) mit Begründung je Fläche, Abzug für Flächen außerhalb des 2-km-Suchraums
@@ -21,7 +27,9 @@ Die App ist eine einzelne HTML-Datei (`index.html`) mit eingebetteten Daten und 
 
 | Quelle | Inhalt | Stand |
 |---|---|---|
-| OpenStreetMap / Overture Maps | Parkflächen, Gebäude, Geschäfte, Gastronomie, Straßennetz | 21.10.2026 |
+| OpenStreetMap / Overture Maps | Parkflächen, Gebäude, Geschäfte, Gastronomie, Straßennetz (bundesweit für die Deutschland-Module) | 21.10.2026 |
+| BASt Dauerzählstellen (Rohdaten) | DTV 2024 an 1.086 Autobahn- und 700 Bundesstraßen-Zählstellen | Jahr 2024 |
+| Zensus 2022 (Destatis) | Einwohner im 1-km-Raster | 15.05.2022 |
 | FlächenTOOL (NOW GmbH), Ebene Deutschlandnetz | Suchraum-Mittelpunkte, Kategorie, Los | 28.10.2026 |
 | Straßen.NRW Verkehrswerte | DTV (Kfz/Tag, Lkw) für B-, L- und K-Straßen | 31.03.2026 |
 | Bundesnetzagentur Ladesäulenregister (CC BY 4.0) | Bestehende Ladeeinrichtungen mit Betreiber und Leistung | 30.09.2026 |
